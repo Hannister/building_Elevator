@@ -1,0 +1,47 @@
+.floor-container{
+  background-image: url("../../../../assets/floor.png");
+  height: 160px;
+  width: 160px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .door-container{
+    height: 120px;
+    width: 86px;
+    background-image: url("../../../../assets/elevator-door.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: -15px;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .door{
+    height: 108px;
+    background-image: url("../../../../assets/one-door.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.2s ease-in;
+    position: relative;
+    top: 6px;
+    left: 2px;
+
+  }
+  .door-close{
+    width: 82px;
+    transition: all  0.2s ease-in;
+
+  }
+  .door-open{
+    width: 5px;
+    transition: all 0.2s 0.4s ease-in;
+
+  }
+
+
+}

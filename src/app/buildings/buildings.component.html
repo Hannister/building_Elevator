@@ -1,0 +1,11 @@
+<div class="page-container">
+  <div class="page-title position-center-raw">
+    <label for="floorNumber">How many floors would you like in the building:</label>
+    <input id="floorNumber" type="number" min="1" [(ngModel)]="floorValue" (ngModelChange)="floorChange($event)" >
+  </div>
+
+  <div class="buildings-container position-center-raw" *ngFor="let building of buildings">
+    <app-bulding [building]="building"></app-bulding>
+  </div>
+
+</div>

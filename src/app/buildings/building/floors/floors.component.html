@@ -1,0 +1,8 @@
+<div class="floor-wrapper" [style]="{background: floorColor }">
+  <div class="floor-container position-center-down">
+    <div class="door-container">
+      <div class="door-left door" [ngClass]="floorNumber === elevator.current_floor? 'door-open': 'door-close'"></div>
+    </div>
+  </div>
+
+</div>

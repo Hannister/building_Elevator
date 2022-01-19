@@ -1,0 +1,10 @@
+<div class="btns-container position-center-column" >
+  <div class="buttons-wrapper position-center-raw">
+    <div *ngFor="let floor of counter();let i = index">
+      <button [ngClass]="i+1 === elevator.current_floor? 'selectedBtn':''" class="floor-button position-center-raw" (click)="goToFloor(i+1)">
+        {{i+1}}
+      </button>
+    </div>
+  </div>
+
+</div>
