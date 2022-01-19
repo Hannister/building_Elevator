@@ -3,12 +3,12 @@
     <app-elevator ></app-elevator>
   </div>
   <div class="building-floors">
-    <div  *ngFor="let floor of building">
+    <div  *ngFor="let floor of building.floors">
       <app-floors  [floorColor]="floor['floor_color']" [floorNumber]="floor['floor_number']" ></app-floors>
     </div>
   </div>
 
   <div class="elevator-buttons">
-    <app-buttons [numberOfFloors]="building.length"></app-buttons>
+    <app-buttons [numberOfFloors]="building.floors.length"></app-buttons>
   </div>
 </div>

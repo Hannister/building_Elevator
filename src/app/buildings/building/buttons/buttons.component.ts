@@ -31,7 +31,7 @@ export class ButtonsComponent implements OnInit {
     return new Array(this.numberOfFloors);
   }
   goToFloor(nextFloor:number){
-    this.floorNumber = nextFloor
+    this.floorNumber = nextFloor;
     this.elevatorService.goToFloor(nextFloor,this.numberOfFloors, this.elevator.floor_pixels)
   }
 }

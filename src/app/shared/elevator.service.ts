@@ -32,4 +32,8 @@ export class ElevatorService {
     }
     return tempList;
   }
+
+  getCurrentElevatorPosition(){
+    return this.elevator.value;
+  }
 }

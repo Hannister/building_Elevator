@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Building} from "../../models/building.model";
 
 @Component({
   selector: 'app-bulding',
@@ -7,14 +8,13 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class BuildingComponent implements OnInit {
 
-  @Input() building!: [] ;
+  @Input() building!: Building ;
   constructor() { }
 
   ngOnInit(): void {
+    // console.log(this.building.floors)
   }
 
-  counter() {
-    return new Array(this.building);
-  }
+
 
 }

@@ -18,6 +18,7 @@ export class FloorsComponent implements OnInit, OnDestroy {
   constructor(private elevatorService: ElevatorService) { }
 
   ngOnInit(): void {
+    // Listening to data to open or close the door accordingly
     this.elevatorSub = this.elevatorService.elevator.subscribe( data => {
       if (data){
         this.elevator = data;

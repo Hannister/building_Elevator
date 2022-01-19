@@ -10,7 +10,6 @@ import {ElevatorService} from "../../../shared/elevator.service";
 })
 export class ElevatorComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  // buildingElevator: Elevator = new Elevator( 1, null);
   elevatorSub!: Subscription;
   @ViewChild('elevatorElement') elevatorElement!: ElementRef;
 
@@ -19,22 +18,20 @@ export class ElevatorComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit(): void {
 
-
-  }
-
-  ngOnDestroy(): void {
-    this.elevatorSub.unsubscribe();
   }
 
   ngAfterViewInit(): void {
+    //moving the elevator according to the current floor
     this.elevatorSub = this.elevatorService.elevator.subscribe( data =>{
       if(data){
         this.renderer.setStyle(this.elevatorElement.nativeElement,
           'top', `${data.floor_pixels}px`);
       }
     })
-    console.log(this.elevatorElement)
+  }
 
+  ngOnDestroy(): void {
+    this.elevatorSub.unsubscribe();
   }
 
 }
